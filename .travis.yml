@@ -24,6 +24,6 @@ install:
 
     export PREBUILD_SLUG="$TRAVIS_REPO_SLUG";
 
-    bash ci/install.sh osx "$PREBUILD_VERSION" "$PREBUILD_CANVAS_VERSION" "$PREBUILD_NODE_VERSIONS";
+    bash -c 'export NVM_DIR=$HOME/.nvm; . $HOME/.nvm/nvm.sh; . ci/install.sh osx "$PREBUILD_VERSION" "$PREBUILD_CANVAS_VERSION" "$PREBUILD_NODE_VERSIONS"';
 
     fi

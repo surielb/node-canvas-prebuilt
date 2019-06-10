@@ -1,7 +1,7 @@
 version: 0.0.{build}
 image: Visual Studio 2017
 install:
-  - ps: Install-Product node 8 x64
+  - ps: Install-Product node 10 x64
   - set PREBUILD_SLUG=%APPVEYOR_REPO_NAME%
   - npm install -g npm node-gyp
   - set "PATH=%APPDATA%\npm;%PATH%"
